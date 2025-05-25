@@ -1,0 +1,34 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-dark: #2b353f;
+  --color-white: #fff;
+  --color-electrician: #90fff6;
+  --color-green: #49a56a;
+}
+
+
+@layer base {
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: #f7f7f7;
+    color: var(--color-dark);
+  }
+
+  h1 {
+    font-weight: 900;
+    font-size: clamp(26px, 2vw, 36px);
+  }
+  h2 {
+    font-weight: 500;
+    font-size: clamp(22px, 2vw, 32px);
+  }
+
+  h3 {
+    font-size: clamp(20px, 1.5vw, 26px);
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+}

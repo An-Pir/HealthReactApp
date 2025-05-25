@@ -1,0 +1,37 @@
+[{
+  "_id": {
+    "$oid": "6815c95c4fd7483326297bbb"
+  },
+  "name": "admin",
+  "email": "admin@mail.ru",
+  "password": "$2b$12$o/aXLDMKgycSYqjZNLM9CeFH/lTa2ba/O6VMn21Bh15WspvkvVfFO",
+  "role": "admin",
+  "createdAt": {
+    "$date": "2025-05-03T07:44:28.606Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-03T07:44:28.606Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "68246cb86d8862771bfb04d8"
+  },
+  "name": "user",
+  "email": "user@mail.ru",
+  "password": "$2b$12$Noi/LoGISjZvC4z3.VX.SOT7KSsWyrovZTWvqOZU/kJW/qKlyfSuy",
+  "role": "user",
+  "registeredEvents": [
+    {
+      "$oid": "6818a809098de3d071909b68"
+    }
+  ],
+  "createdAt": {
+    "$date": "2025-05-14T10:13:12.917Z"
+  },
+  "updatedAt": {
+    "$date": "2025-05-15T18:53:18.732Z"
+  },
+  "__v": 0
+}]
