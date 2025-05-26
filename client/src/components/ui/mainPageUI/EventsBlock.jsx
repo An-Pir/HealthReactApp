@@ -1,15 +1,16 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import defaultImage from '../../../assets/images/img7.jpg';
 
 const EventsBlock = () => {
- const navigate = useNavigate()
+  const navigate = useNavigate();
   const [events, setEvents] = useState([]); // сюда придут события
   const [loading, setLoading] = useState(true); // индикатор загрузки
   const [error, setError] = useState(null); // для ошибок
 
   const handleClick = () => {
-    navigate('/events')
-  }
+    navigate('/events');
+  };
 
   useEffect(() => {
     // Функция, которая делает запрос за 3 ближайшими событиями
@@ -49,23 +50,21 @@ const EventsBlock = () => {
   // Рендерим три события
   return (
     <section className='container mx-auto flex flex-col items-center border-t-2 border-green'>
-    <h2 className='text-center lg:text-3xl my-10 '>Ближайшие мероприятия</h2>
+      <h2 className='text-center lg:text-3xl my-10 '>Ближайшие мероприятия</h2>
       {events.length === 0 ? (
         <p>Ближайших событий не найдено.</p>
       ) : (
-        <ul className='space-y-8   '>
+        <ul className='space-y-8'>
           {events.map((ev) => (
-            <li key={ev._id || ev.id} className='  pb-6 text-center  '>
+            <li key={ev._id || ev.id} className='pb-6 text-center'>
               {/* Картинка */}
-              {ev.imageUrl && (
-                <img
-                  src={ev.imageUrl}
-                  alt={ev.title}
-                  className='w-full md:w-1/2  object-cover rounded mb-4 flex mx-auto transform hover:scale-120 transition-transform duration-500'
-                />
-              )}
+              <img
+                src={ev.imageUrl || defaultImage} // Устанавливаем изображение по умолчанию
+                alt={ev.title}
+                className='w-full md:w-1/2 object-cover rounded mb-4 flex mx-auto transform hover:scale-105 transition-transform duration-500'
+              />
 
-              <div className='cursor-pointer  ' onClick={handleClick}>
+              <div className='cursor-pointer' onClick={handleClick}>
                 {/* Дата */}
                 <em className='text-sm text-red-400'>{ev.startDate}</em>
   
@@ -79,7 +78,6 @@ const EventsBlock = () => {
           ))}
         </ul>
       )}
-
     </section>
   );
 };
