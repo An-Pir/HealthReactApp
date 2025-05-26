@@ -68,7 +68,7 @@ const EventsPage = () => {
 
   return (
     <div className='flex-1 container mx-auto p-4'>
-      <h1 className='mb-4 text-center md:text-left'>Мероприятия</h1>
+      <h1 className='mb-4 text-center '>Мероприятия</h1>
 
       {/* Фильтры */}
       <div className='mb-4 flex justify-center md:justify-start space-x-2 md:space-x-4'>

@@ -11,21 +11,21 @@ const ContactPage = () => {
 
   return (
     <main className='container mx-auto flex justify-center mt-10'>
-      <div className='p-8 w-lg mx-auto bg-white shadow-md rounded-lg flex flex-col gap-5'>
+      <div className='p-8 w-lg xl:w-2xl mx-auto bg-white shadow-md rounded-lg flex flex-col gap-5'>
         <div className='flex flex-col gap-1'>
           <h2 className='text-center mb-4'>Контактная информация</h2>
-          <p className='mb-2'>
-            <strong>Адрес:</strong> г. Ноябрьск, ул. 60 лет СССР, 29а
+          <p className='mb-2 flex flex-col sm:flex-row'>
+            <strong>Адрес:</strong> <span>г. Ноябрьск, ул. 60 лет СССР, 29а</span>
           </p>
-          <p className='mb-2'>
-            <strong>Телефон:</strong> +7 (3496) 35-78-44
+          <p className='mb-2 flex flex-col sm:flex-row'>
+            <strong>Телефон:</strong> <span>+7 (3496) 35-78-44</span> 
           </p>
-          <p>
-            <strong>Email:</strong> zdorovje@noyabrsk.yanao.ru
+          <p className='mb-2 flex flex-col sm:flex-row'>
+            <strong>Email:</strong><span>zdorovje@noyabrsk.yanao.ru</span> 
           </p>
-          <h3 className='text-green'>Отдел по спортивной работе</h3>
-          <p className='mb-2'>
-            <strong>Телефон:</strong> +7 (3496) 35-73-86
+          <h3 className='text-green text-[18px] '>Отдел по спортивной работе</h3>
+          <p className='mb-2 flex flex-col sm:flex-row'>
+            <strong>Телефон:</strong> <span>+7 (3496) 35-73-86</span>
           </p>
           <div className='flex flex-col gap-2 mt-4'>
             <h2>График работы:</h2>
